@@ -1,0 +1,111 @@
+<RelativeLayout xmlns:android = "http://schemas.android.com/apk/res/android"
+    android:layout_width = "fill_parent"
+    android:layout_height = "fill_parent"
+    android:paddingLeft = "16dp"
+    android:paddingRight = "16dp" >
+       
+    <Spinner
+        android:id = "@+id/spin_city"
+        android:layout_width = "80dp"  
+        android:layout_height = "wrap_content" 
+        android:layout_alignParentRight  =  "true"/>
+
+    <Spinner
+        android:id = "@+id/spin_district"
+        android:layout_width = "80dp"  
+        android:layout_height = "wrap_content"
+        android:layout_below="@id/spin_city"
+        android:layout_alignParentRight  =  "true"/>
+    
+    <Spinner 
+        android:id = "@+id/spin_business_circle"   
+        android:layout_width = "80dp"  
+        android:layout_height = "wrap_content"
+        android:layout_below="@id/spin_district"
+        android:layout_alignParentRight  =  "true"/>
+    
+    <Spinner 
+        android:id = "@+id/spin_price"   
+        android:layout_width = "80dp"  
+        android:layout_height = "wrap_content"
+        android:layout_below="@id/spin_business_circle"
+        android:layout_alignParentRight  =  "true"/>
+    
+    <Spinner 
+        android:id = "@+id/spin_acreage"   
+        android:layout_width = "80dp"  
+        android:layout_height = "wrap_content"
+        android:layout_below="@id/spin_price"
+        android:layout_alignParentRight  =  "true"/>
+    
+    <Spinner 
+        android:id = "@+id/spin_room"   
+        android:layout_width = "80dp"  
+        android:layout_height = "wrap_content"
+        android:layout_below="@id/spin_acreage"
+        android:layout_alignParentRight  =  "true"/>
+
+
+    <Button
+        android:layout_width = "wrap_content"
+        android:layout_height = "wrap_content"
+        android:text = "@string/button_send" 
+        android:onClick = "sendMessage"
+        android:layout_below="@id/spin_room"
+        android:layout_alignParentRight  =  "true"/>
+
+    <TextView
+        android:id="@+id/city"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/spin_city"
+        android:layout_alignLeft="@+id/price"
+        android:layout_marginBottom="20dp"
+        android:hint="@string/city" />
+
+    <TextView
+        android:id="@+id/district"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/city"
+        android:layout_alignTop="@+id/spin_district"
+        android:layout_marginTop="19dp"
+        android:hint="@string/district" />
+
+    <TextView
+        android:id="@+id/business_circle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/district"
+        android:layout_alignTop="@+id/spin_business_circle"
+        android:layout_marginTop="16dp"
+        android:hint="@string/business_circle" />
+
+    <TextView
+        android:id="@+id/acreage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/spin_acreage"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="19dp"
+        android:layout_marginLeft="56dp"
+        android:hint="@string/acreage" />
+
+    <TextView
+        android:id="@+id/room"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/acreage"
+        android:layout_alignTop="@+id/spin_room"
+        android:layout_marginTop="22dp"
+        android:hint="@string/room" />
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/acreage"
+        android:layout_centerVertical="true"
+        android:hint="@string/price" />
+
+</RelativeLayout>
