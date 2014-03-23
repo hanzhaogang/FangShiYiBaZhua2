@@ -1,7 +1,7 @@
 package cn.hzg1981.fangshiyibazhua;
 
 import cn.hzg1981.fangshiyibazhua.GanjiCrawler;
-import cn.hzg1981.fangshiyibazhua.DisplayResultActivity;
+import cn.hzg1981.fangshiyibazhua.DisplayQueryResultActivity;
 import cn.hzg1981.fangshiyibazhua.InputData;
 import cn.hzg1981.fangshiyibazhua.R;
 import android.os.Bundle;
@@ -70,11 +70,31 @@ public class MainActivity extends Activity {
 //        
 //        //if this app has been run before, 
     }
-    
-    public void sendMessage(View view) {
-        // Called when the user clicks the Send button 
+      
+    public void EchoQueryCriteria(View view) {
    
-    	Intent intent = new Intent(this, DisplayResultActivity.class);
+    	Intent intent = new Intent(this, EchoUsersQueryCriteriaActivity.class);
+        
+        String city = citySpinner.getSelectedItem().toString();
+        String district = districtSpinner.getSelectedItem().toString();
+        String business_circle = business_circleSpinner.getSelectedItem().toString();
+        String price = priceSpinner.getSelectedItem().toString();
+        String acreage = acreageSpinner.getSelectedItem().toString();
+        String room = roomSpinner.getSelectedItem().toString();
+
+    	intent.putExtra(CITY, city);
+    	intent.putExtra(DISTRICT, district);
+    	intent.putExtra(BUSINESS_CIRCLE, business_circle);
+    	intent.putExtra(PRICE, price);
+    	intent.putExtra(ACREAGE, acreage);
+    	intent.putExtra(ROOM, room);
+
+    	startActivity(intent);
+    }
+   
+    public void QueryDatabase(View view) {
+   
+    	Intent intent = new Intent(this, DisplayQueryResultActivity.class);
         
         String city = citySpinner.getSelectedItem().toString();
         String district = districtSpinner.getSelectedItem().toString();
@@ -93,6 +113,30 @@ public class MainActivity extends Activity {
 
     	startActivity(intent);
     }
+    
+    public void CreateSecondaryHouseTableInDatabase(View view) {
+    	   
+    	Intent intent = new Intent(this, CreateSecondaryHouseTableActivity.class);
+        
+        String city = citySpinner.getSelectedItem().toString();
+        String district = districtSpinner.getSelectedItem().toString();
+        String business_circle = business_circleSpinner.getSelectedItem().toString();
+        String price = priceSpinner.getSelectedItem().toString();
+        String acreage = acreageSpinner.getSelectedItem().toString();
+        String room = roomSpinner.getSelectedItem().toString();
+
+    	
+    	intent.putExtra(CITY, city);
+    	intent.putExtra(DISTRICT, district);
+    	intent.putExtra(BUSINESS_CIRCLE, business_circle);
+    	intent.putExtra(PRICE, price);
+    	intent.putExtra(ACREAGE, acreage);
+    	intent.putExtra(ROOM, room);
+
+    	startActivity(intent);
+    }   
+    
+  
     
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

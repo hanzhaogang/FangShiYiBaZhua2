@@ -8,10 +8,20 @@
     <string name="price">总价</string>
     <string name="acreage">面积</string>
     <string name="room">居室</string>
-    <string name="button_send">查找</string>
+    
+    <string name="button_query">查找</string>
+    <string name="button_create">创建</string>
+    <string name="button_echo">回显</string>
+   
     <string name="action_settings">Settings</string>
-    <string name="title_activity_main">MainActivity</string>
+   
+    <string name="title_activity_main">房事一把抓</string>
     <string name="title_activity_display_result">查找结果</string>
-    <string name="action_search">查找结果</string>
+    <string name="title_activity_echo_query_criteria">回显查询条件</string>
+    <string name="title_activity_create_SQLiteDatabase">创建SQLite数据库</string>
 
+    <string name="action_search">查找结果</string>
+    
+    <string name="results_number">结果数量</string>
+    
 </resources>

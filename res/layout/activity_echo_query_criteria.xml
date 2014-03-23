@@ -31,20 +31,20 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="19dp"
         android:layout_marginLeft="56dp"
-        android:hint="@string/acreage" />
+        />
 
     <TextView
         android:id="@+id/room"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="22dp"
-        android:hint="@string/room" />
+         />
 
     <TextView
         android:id="@+id/price"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
-        android:hint="@string/price" />
+        />
 
 </LinearLayout>

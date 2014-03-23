@@ -44,16 +44,7 @@
         android:layout_height = "wrap_content"
         android:layout_below="@id/spin_acreage"
         android:layout_alignParentRight  =  "true"/>
-
-
-    <Button
-        android:layout_width = "wrap_content"
-        android:layout_height = "wrap_content"
-        android:text = "@string/button_send" 
-        android:onClick = "sendMessage"
-        android:layout_below="@id/spin_room"
-        android:layout_alignParentRight  =  "true"/>
-
+    
     <TextView
         android:id="@+id/city"
         android:layout_width="wrap_content"
@@ -107,5 +98,29 @@
         android:layout_alignLeft="@+id/acreage"
         android:layout_centerVertical="true"
         android:hint="@string/price" />
+
+   <Button
+        android:layout_width = "wrap_content"
+        android:layout_height = "wrap_content"
+        android:layout_below="@id/spin_room"
+        android:layout_alignParentRight  =  "true"
+        android:text = "@string/button_echo" 
+        android:onClick = "EchoQueryCriteria"/>
+    
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="@string/button_query"  
+        android:onClick="QueryDatabase"/>
+        
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/room"
+        android:text="@string/button_create" 
+        android:onClick="CreateSecondaryHouseTableInDatabase"/>
 
 </RelativeLayout>
